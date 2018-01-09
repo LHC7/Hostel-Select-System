@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">ChoosingDorm</string>
+    <string name="北大软微选宿舍">北大软微选宿舍</string>
+    <string name="账号">账号</string>
+    <string name="密码">密码</string>
+    <string name="学号">学号</string>
+    <string name="个人信息查询">个人信息查询</string>
+    <string name="姓名">姓名</string>
+    <string name="性别">性别</string>
+    <string name="校验码">校验码</string>
+    <string name="宿舍号">宿舍号</string>
+    <string name="楼号">楼号</string>
+    <string name="校区">校区</string>
+    <string name="年级">年级</string>
+    <string name="返回主页">返回主页</string>
+    <string name="查询床位数">查询床位数</string>
+    <string name="五号楼">五号楼</string>
+    <string name="十三号楼">十三号楼</string>
+    <string name="十四号楼">十四号楼</string>
+    <string name="八号楼">八号楼</string>
+    <string name="九号楼">九号楼</string>
+    <string name="_200">200</string>
+    <string name="_100">100</string>
+    <string name="_0">0</string>
+    <string name="单人选宿舍">单人选宿舍</string>
+    <string name="查询个人信息">查询个人信息</string>
+    <string name="多人选宿舍">多人选宿舍</string>
+    <string name="总办理人数">总办理人数</string>
+    <string name="办理人">办理人</string>
+    <string name="办理人学号">办理人学号</string>
+    <string name="确认">确认</string>
+    <string name="我的学号">我的学号</string>
+    <string name="我的校验码">我的校验码</string>
+    <string name="同住人一">同住人一</string>
+    <string name="同住人二">同住人二</string>
+    <string name="同住人三"><![CDATA[<TextView                 android:layout_width=\"fill_parent\"                 android:layout_height=\"wrap_content\"                 android:text=\"@string/同住人二\"                 android:textSize=\"20sp\"                 android:textStyle=\"bold\" />]]></string>
+    <string name="未选择">未选择</string>
+    <string name="办理人数">办理人数</string>
+    <string name="输入学号">输入学号</string>
+    <string name="输入校验码">输入校验码</string>
+    <string name="请输入楼号">请输入楼号</string>
+    <string name="请输入校验码">请输入校验码</string>
+    <string name="请输入学号">请输入学号</string>
+    <string name="成功选取">成功选取</string>
+    <string name="选取失败">选取失败</string>
+    <string name="床位数">床位数</string>
+</resources>

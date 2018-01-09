@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="45.0dp"
+        android:background="#ffcd2626"
+        android:gravity="center_vertical"
+        tools:ignore="UselessParent">
+
+
+        <ImageView
+            android:id="@+id/title_home"
+            android:layout_width="45dip"
+            android:layout_height="45dip"
+            android:src="@drawable/title_home"
+            android:contentDescription="@string/app_name"/>
+
+        <TextView
+            android:id="@+id/title_name"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical"
+            android:layout_marginStart="135dp"
+            android:layout_marginLeft="135dp"
+            android:text="单人选宿舍"
+            android:textColor="#ffffffff"
+            android:textSize="20.0sp"
+            android:layout_marginTop="2.0dip"/>
+
+    </RelativeLayout>
+
+    <!--输入个人讯息 -->
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/home_background3"
+        android:layout_below="@+id/title"
+        android:orientation="vertical">
+
+        <!--<TableLayout-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:stretchColumns="*"-->
+            <!--android:background="#ffffff">-->
+            <!--<TableRow-->
+                <!--android:background="#ffffff"-->
+                <!--android:layout_margin=".5dp">-->
+                <!--<TextView-->
+                    <!--android:layout_width="fill_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="总办理人数"-->
+                    <!--android:textColor="#ff000000"-->
+                    <!--android:textSize="20sp"-->
+                    <!--android:textStyle="bold" />-->
+
+                <!--<EditText-->
+                    <!--android:id="@+id/num_sing_edit_text"-->
+                    <!--android:layout_width="fill_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:inputType="text"-->
+                    <!--android:hint="办理人数"-->
+                    <!--android:textColorHint="#a9a9a9"-->
+                    <!--android:singleLine="true"-->
+                    <!--android:textColor="#ff000000"-->
+                    <!--android:textSize="20sp"/>-->
+
+            <!--</TableRow>-->
+        <!--</TableLayout>-->
+
+        <TableLayout
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:stretchColumns="*"
+            android:background="#ffffff">
+            <TableRow
+                android:background="#ffffff"
+                android:layout_margin=".5dp">
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="学号"
+                    android:textColor="#ff000000"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/id_sing_edit_text"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:hint="输入学号"
+                    android:textColorHint="#a9a9a9"
+                    android:singleLine="true"
+                    android:textColor="#ff000000"
+                    android:textSize="20sp"/>
+
+            </TableRow>
+        </TableLayout>
+
+        <!--<TableLayout-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:stretchColumns="*"-->
+            <!--android:background="#ffffff">-->
+            <!--<TableRow-->
+                <!--android:background="#ffffff"-->
+                <!--android:layout_margin=".5dp">-->
+                <!--<TextView-->
+                    <!--android:layout_width="fill_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="校验码"-->
+                    <!--android:textColor="#ff000000"-->
+                    <!--android:textSize="20sp"-->
+                    <!--android:textStyle="bold" />-->
+
+                <!--<EditText-->
+                    <!--android:id="@+id/vcode_sing_edit_text"-->
+                    <!--android:layout_width="fill_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:inputType="text"-->
+                    <!--android:hint="输入校验码"-->
+                    <!--android:textColorHint="#a9a9a9"-->
+                    <!--android:singleLine="true"-->
+                    <!--android:textColor="#ff000000"-->
+                    <!--android:textSize="20sp"/>-->
+
+            <!--</TableRow>-->
+        <!--</TableLayout>-->
+
+        <TableLayout
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:stretchColumns="*"
+            android:background="#ffffff">
+            <TableRow
+                android:background="#ffffff"
+                android:layout_margin=".5dp">
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="楼号"
+                    android:textColor="#ff000000"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/buildingNo_sing_edit_text"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:hint="请输入楼号"
+                    android:textColorHint="#a9a9a9"
+                    android:singleLine="true"
+                    android:textColor="#ff000000"
+                    android:textSize="20sp"/>
+
+            </TableRow>
+        </TableLayout>
+
+    </LinearLayout>
+
+
+    <!--确认按钮 -->
+    <Button
+        android:id="@+id/goto_do_ok_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="确认"
+        android:textSize="20sp"
+        android:layout_marginTop="450dp"
+        android:layout_marginLeft="165dp"
+        android:layout_marginStart="165dp"/>
+
+    <TextView
+        android:id="@+id/errorHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="学号错误"
+        android:textColor="#ab0a17"
+        android:layout_centerHorizontal="true"
+        android:textSize="20sp"
+        android:visibility="invisible"/>
+
+</RelativeLayout>
+

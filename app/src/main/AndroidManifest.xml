@@ -1,0 +1,44 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    package="cn.edu.pku.linhc.choosingdorm">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:fullBackupContent="@xml/backup_descriptor"
+        tools:ignore="GoogleAppIndexingWarning">
+
+
+        <!--注册Activity并将ChooDorm增加选转屏幕横向功能-->
+        <activity
+            android:name=".choodorm.Login"
+            android:label="ChooDorm"
+            android:screenOrientation="landscape">
+            <intent-filter>
+                <!--android:name 指定Activity名称-->
+                <action android:name="android.intent.action.MAIN" />
+                <!--android:label 指定标题栏的内容-->
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".choodorm.Info">
+            <intent-filter>
+                <!--android:name 指定Activity名称-->
+                <action android:name="android.intent.action.MAIN" />
+                <!--android:label 指定标题栏的内容-->
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".choodorm.DoC" />
+        <activity android:name=".choodorm.DormInfo" />
+        <!--<activity android:name=".PersInfo" />
+        <activity android:name=".ChooDorm" />-->
+    </application>
+
+</manifest>

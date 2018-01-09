@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!--在“dorm_home”布局文件中增加一个RelativeLayout布局
+    其中設定其id、寬度和高度、顏色以及位置-->
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="45.0dp"
+        android:background="#ffcd2626"
+        android:gravity="center_vertical"
+        tools:ignore="UselessParent">
+
+
+        <ImageView
+            android:id="@+id/title_home"
+            android:layout_width="45dip"
+            android:layout_height="45dip"
+            android:src="@drawable/title_home"
+            android:contentDescription="@string/app_name"/>
+
+        <TextView
+            android:id="@+id/title_name"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical"
+            android:layout_marginStart="135dp"
+            android:layout_marginLeft="135dp"
+            android:text="信息查询"
+            android:textColor="#ffffffff"
+            android:textSize="20.0sp"
+            android:layout_marginTop="2.0dip"/>
+
+        <!--<ImageView
+            android:id="@+id/title_update"
+            android:layout_width="45dip"
+            android:layout_height="45dip"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="center"
+            android:src="@drawable/title_update"
+            android:contentDescription="@string/app_name" />-->
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_height="fill_parent"
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/title">
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/title"
+        android:background="@drawable/home_background3"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="查询个人信息"
+            android:textColor="#000000"
+            android:textSize="20sp"/>
+
+
+        <TableLayout
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:stretchColumns="*"
+            android:background="#ffffff">
+            <TableRow
+                android:background="#ffffff"
+                android:layout_margin=".5dp">
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="学号"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/home"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="NULL"
+                    android:textColor="#000000"
+                    android:textSize="20sp"/>
+
+            </TableRow>
+        </TableLayout>
+
+        <TableLayout
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:stretchColumns="*"
+            android:background="#ffffff">
+            <TableRow
+                android:background="#ffffff"
+                android:layout_margin=".5dp">
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="姓名"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/input_name"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="NULL"
+                    android:textColor="#000000"
+                    android:textSize="20sp"/>
+
+            </TableRow>
+        </TableLayout>
+
+        <TableLayout
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:stretchColumns="*"
+            android:background="#ffffff">
+            <TableRow
+                android:background="#ffffff"
+                android:layout_margin=".5dp">
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="性别"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/input_gender"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="NULL"
+                    android:textColor="#000000"
+                    android:textSize="20sp"/>
+            </TableRow>
+        </TableLayout>
+
+        <TableLayout
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:stretchColumns="*"
+            android:background="#ffffff">
+            <TableRow
+                android:background="#ffffff"
+                android:layout_margin=".5dp">
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="校验码"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/input_Vcode"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="NULL"
+                    android:textColor="#000000"
+                    android:textSize="20sp"/>
+            </TableRow>
+        </TableLayout>
+
+        <TableLayout
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:stretchColumns="*"
+            android:background="#ffffff">
+            <TableRow
+                android:background="#ffffff"
+                android:layout_margin=".5dp">
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="宿舍号"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/input_dormnum"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="NULL"
+                    android:textColor="#000000"
+                    android:textSize="20sp"/>
+
+            </TableRow>
+        </TableLayout>
+
+        <TableLayout
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:stretchColumns="*"
+            android:background="#ffffff">
+            <TableRow
+                android:background="#ffffff"
+                android:layout_margin=".5dp">
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="楼号"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/input_buildingnum"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="NULL"
+                    android:textColor="#000000"
+                    android:textSize="20sp"/>
+            </TableRow>
+        </TableLayout>
+
+        <TableLayout
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:stretchColumns="*"
+            android:background="#ffffff">
+            <TableRow
+                android:background="#ffffff"
+                android:layout_margin=".5dp">
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="校区"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/input_distruct"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="NULL"
+                    android:textColor="#000000"
+                    android:textSize="20sp"/>
+
+            </TableRow>
+        </TableLayout>
+
+        <TableLayout
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:stretchColumns="*"
+            android:background="#ffffff">
+            <TableRow
+                android:background="#ffffff"
+                android:layout_margin=".5dp">
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="年级"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/input_grade"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="NULL"
+                    android:textColor="#000000"
+                    android:textSize="20sp"/>
+
+
+            </TableRow>
+        </TableLayout>
+
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="查询床位数"
+            android:textColor="#000000"
+            android:textSize="20sp"/>
+
+        <TableLayout
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:stretchColumns="*"
+            android:background="#ffffff">
+            <TableRow
+                android:background="#ffffff"
+                android:layout_margin=".5dp">
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="楼号"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="床位数"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </TableRow>
+        </TableLayout>
+
+
+        <TableLayout
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:stretchColumns="*"
+            android:background="#ffffff">
+            <TableRow
+                android:background="#ffffff"
+                android:layout_margin=".5dp">
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="五号楼"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/input_5"
+                    android:text="200"
+                    android:textColor="#000000"
+                    android:textSize="18sp"/>
+
+            </TableRow>
+        </TableLayout>
+
+        <TableLayout
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:stretchColumns="*"
+            android:background="#ffffff">
+            <TableRow
+                android:background="#ffffff"
+                android:layout_margin=".5dp">
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="十三号楼"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/input_13"
+                    android:text="100"
+                    android:textColor="#000000"
+                    android:textSize="18sp"/>
+
+            </TableRow>
+        </TableLayout>
+
+        <TableLayout
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:stretchColumns="*"
+            android:background="#ffffff">
+            <TableRow
+                android:background="#ffffff"
+                android:layout_margin=".5dp">
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="十四号楼"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/input_14"
+                    android:text="100"
+                    android:textColor="#000000"
+                    android:textSize="18sp"/>
+
+            </TableRow>
+        </TableLayout>
+
+        <TableLayout
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:stretchColumns="*"
+            android:background="#ffffff">
+            <TableRow
+                android:background="#ffffff"
+                android:layout_margin=".5dp">
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="八号楼"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/input_8"
+                    android:text="0"
+                    android:textColor="#000000"
+                    android:textSize="18sp"/>
+
+            </TableRow>
+        </TableLayout>
+
+        <TableLayout
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:stretchColumns="*"
+            android:background="#ffffff">
+            <TableRow
+                android:background="#ffffff"
+                android:layout_margin=".5dp">
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="九号楼"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/input_9"
+                    android:text="0"
+                    android:textColor="#000000"
+                    android:textSize="18sp"/>
+
+            </TableRow>
+        </TableLayout>
+
+        <!--校园地图 -->
+        <ImageView
+            android:id="@+id/map"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/map"
+            android:contentDescription="@string/app_name"/>
+
+    </LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/goto_dochoosing_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="单人选宿舍"
+        android:textSize="20sp"
+        android:layout_marginTop="450dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginStart="70dp"/>
+
+
+    <Button
+        android:id="@+id/goto_dochoopl_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="多人选宿舍"
+        android:textSize="20sp"
+        android:layout_marginTop="450dp"
+        android:layout_marginLeft="220dp"
+        android:layout_marginStart="220dp"/>
+
+
+</RelativeLayout>
+

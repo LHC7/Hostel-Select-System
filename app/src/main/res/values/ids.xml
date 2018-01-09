@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="account_delete" type="id">0x7f0b00ab</item>
+    <item name="username_delete" type="id">0x7f0b00ab</item>
+</resources>
