@@ -41,6 +41,7 @@ import java.net.URL;
 import cn.edu.pku.linhc.choosingdorm.R;
 import cn.edu.pku.linhc.choosingdorm.util.NetUtil;
 
+import static android.os.Build.VERSION_CODES.N;
 import static org.xmlpull.v1.XmlPullParser.END_DOCUMENT;
 import static org.xmlpull.v1.XmlPullParser.END_TAG;
 import static org.xmlpull.v1.XmlPullParser.START_DOCUMENT;
@@ -61,17 +62,20 @@ public class Login extends Activity implements View.OnClickListener {
     private TextView mUsernameError, mPwdError;
     private ImageView mLoginBtn;
     private long[] mHints = new long[10];
+    private Bundle savedInstanceState;
 
     //OnClickListener 加载.java文件至对应之xml文件
     //继承自Activity类、 重写OnCreate方法
     //@SuppressLint("CutPasteId")
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
+        this.savedInstanceState = savedInstanceState;
         super.onCreate(savedInstanceState);
-        //在Activity中通过调用setContentView方法加载布局
+        //在Activity中通过调用setContentView方法
+        // 加载布局
         setContentView(R.layout.login);
         //加入屏幕旋转变化
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+//        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
 
         mLoginBtn = (ImageView) findViewById(R.id.login_icon);
         mLoginBtn.setOnClickListener(this);
@@ -141,12 +145,6 @@ public class Login extends Activity implements View.OnClickListener {
         password = mPassword.getText().toString();
 
         if (!username.equals("") && !password.equals("")) {
-//            if (mRmbPwd.isChecked()) {
-//                SharedPreferences.Editor editor = sharedPreferences.edit();
-//                editor.putString("USERNAME", username);
-//                editor.putString("PASSWORD", password);
-//                editor.commit();
-//            }
 
             final String address = "https://api.mysspku.com/index.php/V1/MobileCourse/Login?username=" + username + "&password=" + password;
             new Thread(new Runnable() {

@@ -62,7 +62,7 @@ public class DoChooSing extends Activity implements View.OnClickListener {
         //在Activity中通过调用setContentView方法加载布局
         setContentView(R.layout.dochoosing);
         //加入屏幕旋转变化
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+//        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
 
 
         //在Activity中测试网络，调用方法检测如有网络用Toast.makeText显示文字网络OK，若没有则显示网络挂了

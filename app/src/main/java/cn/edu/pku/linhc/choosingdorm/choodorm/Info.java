@@ -64,7 +64,7 @@ public class Info extends Activity implements View.OnClickListener {
         //在Activity中通过调用setContentView方法加载布局
         setContentView(R.layout.info);
         //加入屏幕旋转变化
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+//        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
 
 
 
